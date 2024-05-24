@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Inputs</title>
+  </head>
+  <body class="flex flex-col gap-6 p-6">
+    <input class="p-2 border border-gray-300 rounded-lg" type="text" placeholder="Small input" />
+    <textarea class="p-2 border border-gray-300 rounded-lg resize-none h-24" draggable="false" type="text" placeholder="Medium input"></textarea>
+    <textarea class="p-2 border border-gray-300 rounded-lg resize-none h-44" draggable="false" type="text" placeholder="Large input"></textarea>
+
+    <input class="w-full p-2 border border-gray-300 rounded-lg" type="date" />
+    <input class="w-full p-2 border border-gray-300 rounded-lg" type="time" />
+
+    <div class="flex flex-col gap-2">
+      <label class="flex items-center w-full">
+        <input type="checkbox" class="form-checkbox h-4 w-4 text-indigo-600" />
+        <span class="ml-2">Checkbox</span>
+      </label>
+      <label class="flex items-center">
+        <input type="radio" class="form-radio h-4 w-4 text-indigo-600" name="radio" />
+        <span class="ml-2">Radio Button 1</span>
+      </label>
+      <label class="flex items-center">
+        <input type="radio" class="form-radio h-4 w-4 text-indigo-600" name="radio" />
+        <span class="ml-2">Radio Button 2</span>
+      </label>
+      <label class="flex items-center">
+        <input type="radio" class="form-radio h-4 w-4 text-indigo-600" name="radio" />
+        <span class="ml-2">Radio Button 3</span>
+      </label>
+    </div>
+
+    <select class="p-2 border border-gray-300 rounded-lg">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+  </body>
+</html>

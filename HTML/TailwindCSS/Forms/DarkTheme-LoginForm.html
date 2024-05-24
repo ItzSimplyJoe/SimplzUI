@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Login form</title>
+  </head>
+  <body class="flex flex-col gap-6 p-6">
+        <form>
+            <div class="mb-4">
+                <label for="username" class="block text-white text-sm font-bold mb-2">Username</label>
+                <input type="text" id="username" name="username" class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-white bg-gray-800 leading-tight focus:outline-blue-700 focus:shadow-outline" placeholder="Enter your username">
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-white text-sm font-bold mb-2">Password</label>
+                <input type="password" id="password" name="password" class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-white bg-gray-800 leading-tight focus:outline-blue-700 focus:shadow-outline" placeholder="Enter your password">
+            </div>
+            <div class="mb-4">
+                <label for="remember" class="flex items-center">
+                    <input type="checkbox" id="remember" name="remember" class="mr-2">
+                    <span class="text-sm">Remember me</span>
+                </label>
+            </div>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline">Submit</button>
+        </form>
+  </body>
+</html>

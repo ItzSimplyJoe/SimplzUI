@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Signup form</title>
+  </head>
+  <body class="flex flex-col gap-6 p-6">
+    <form>
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <input
+            type="text"
+            id="username"
+            name="username"
+            class="border-b-2 border-gray-600 w-full py-2 px-3 text-white bg-gray-800 leading-tight focus:outline-none focus:border-blue-500"
+            placeholder="Username"
+          />
+        </div>
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="border-b-2 border-gray-600 w-full py-2 px-3 text-white bg-gray-800 leading-tight focus:outline-none focus:border-blue-500"
+            placeholder="Email"
+          />
+        </div>
+      </div>
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="border-b-2 border-gray-600 w-full py-2 px-3 text-white bg-gray-800 leading-tight focus:outline-none focus:border-blue-500"
+            placeholder="Password"
+          />
+        </div>
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            class="border-b-2 border-gray-600 w-full py-2 px-3 text-white bg-gray-800 leading-tight focus:outline-none focus:border-blue-500"
+            placeholder="Confirm Password"
+          />
+        </div>
+      </div>
+      <div class="mb-4">
+        <input
+          type="text"
+          id="full-name"
+          name="full-name"
+          class="border-b-2 border-gray-600 w-full py-2 px-3 text-white bg-gray-800 leading-tight focus:outline-none focus:border-blue-500"
+          placeholder="Full Name"
+        />
+      </div>
+      <div class="mb-4">
+        <input
+          type="text"
+          id="phone-number"
+          name="phone-number"
+          class="border-b-2 border-gray-600 w-full py-2 px-3 text-white bg-gray-800 leading-tight focus:outline-none focus:border-blue-500"
+          placeholder="Phone Number"
+        />
+      </div>
+      <div class="mb-4">
+        <input
+          type="text"
+          id="address"
+          name="address"
+          class="border-b-2 border-gray-600 w-full py-2 px-3 text-white bg-gray-800 leading-tight focus:outline-none focus:border-blue-500"
+          placeholder="Address"
+        />
+      </div>
+      <button
+        type="submit"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
+      >
+        Sign Up
+      </button>
+    </form>
+  </body>
+</html>

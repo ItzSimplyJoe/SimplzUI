@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Interface</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex flex-col gap-6 p-6">
+    <div class="w-full bg-white shadow-lg rounded-lg">
+        <div class="flex w-full justify-start gap-2">
+            <div class="flex justify-center items-center px-12 py-3 cursor-pointer transition-all duration-300 border-b-4 border-transparent border-blue-600 text-blue-600" tabItem="tab1">Tab 1</div>
+            <div class="flex justify-center items-center px-12 py-3 cursor-pointer transition-all duration-300 border-b-4 border-transparent" tabItem="tab2">Tab 2</div>
+            <div class="flex justify-center items-center px-12 py-3 cursor-pointer transition-all duration-300 border-b-4 border-transparent" tabItem="tab3">Tab 3</div>
+            <div class="flex justify-center items-center px-12 py-3 cursor-pointer transition-all duration-300 border-b-4 border-transparent" tabItem="tab4">Tab 4</div>
+            <div class="flex justify-center items-center px-12 py-3 cursor-pointer transition-all duration-300 border-b-4 border-transparent" tabItem="tab5">Tab 5</div>
+        </div>
+        <div class="p-4 border-t border-gray-200 w-full">
+            <div id="tab1">
+                Content for Tab 1
+            </div>
+            <div id="tab2" class="hidden">
+                Content for Tab 2
+            </div>
+            <div id="tab3" class="hidden">
+                Content for Tab 3
+            </div>
+            <div id="tab4" class="hidden">
+                Content for Tab 4
+            </div>
+            <div id="tab5" class="hidden">
+                Content for Tab 5
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.querySelectorAll("[tabItem]").forEach((tab) => {
+            tab.addEventListener("click", () => {
+                // Hide all tab contents
+                document.querySelectorAll("[id^='tab']").forEach((tabContent) => {
+                    tabContent.classList.add("hidden");
+                });
+                
+                // Show the selected tab content
+                var content = document.getElementById(tab.getAttribute("tabItem"));
+                content.classList.remove("hidden");
+                
+                // Reset all tabs to inactive state
+                document.querySelectorAll("[tabItem]").forEach((tab) => {
+                    tab.classList.remove("border-blue-600", "text-blue-600");
+                    tab.classList.add("border-transparent");
+                });
+                
+                // Set the clicked tab to active state
+                tab.classList.remove("border-transparent");
+                tab.classList.add("border-blue-600", "text-blue-600");
+            });
+        });
+    </script>
+    
+</body>
+</html>

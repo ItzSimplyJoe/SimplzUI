@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab With Icons</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="flex flex-col gap-6 p-6">
+    <div class="w-full bg-white shadow-lg rounded-lg">
+      <div class="flex w-full justify-start gap-2">
+        <div
+          class="flex gap-2 justify-center items-center px-12 py-3 cursor-pointer transition-all duration-300 border-b-4 border-transparent border-blue-600 text-blue-600 hover:border-blue-600 hover:text-blue-600"
+          tabItem="tab1"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 576 512"
+            class="h-6 w-6"
+          >
+            <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              fill="currentcolor"
+              d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+            />
+          </svg>
+          Tab 1
+        </div>
+        <div
+          class="flex gap-2 justify-center items-center px-12 py-3 cursor-pointer transition-all duration-300 border-b-4 border-transparent hover:border-blue-600 hover:text-blue-600"
+          tabItem="tab2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            class="w-6 h-6"
+          >
+            <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              fill="currentcolor"
+              d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+            />
+          </svg>
+          Tab 2
+        </div>
+        <div
+          class="flex gap-2 justify-center items-center px-12 py-3 cursor-pointer transition-all duration-300 border-b-4 border-transparent hover:border-blue-600 hover:text-blue-600"
+          tabItem="tab3"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            class="w-6 h-6"
+          >
+            <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              fill="currentcolor"
+              d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+            />
+          </svg>
+          Tab 3
+        </div>
+        <div
+          class="flex gap-2 justify-center items-center px-12 py-3 cursor-pointer transition-all duration-300 border-b-4 border-transparent hover:border-blue-600 hover:text-blue-600"
+          tabItem="tab4"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            class="w-6 h-6"
+          >
+            <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              fill="currentcolor"
+              d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"
+            />
+          </svg>
+          Tab 4
+        </div>
+        <div
+          class="flex gap-2 justify-center items-center px-12 py-3 cursor-pointer transition-all duration-300 border-b-4 border-transparent hover:border-blue-600 hover:text-blue-600"
+          tabItem="tab5"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="currentcolor" d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h96 32H424c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg>
+          Tab 5
+        </div>
+      </div>
+      <div class="p-4 border-t border-gray-200 w-full">
+        <div id="tab1">Content for Tab 1</div>
+        <div id="tab2" class="hidden">Content for Tab 2</div>
+        <div id="tab3" class="hidden">Content for Tab 3</div>
+        <div id="tab4" class="hidden">Content for Tab 4</div>
+        <div id="tab5" class="hidden">Content for Tab 5</div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll("[tabItem]").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          // Hide all tab contents
+          document.querySelectorAll("[id^='tab']").forEach((tabContent) => {
+            tabContent.classList.add("hidden");
+          });
+
+          // Show the selected tab content
+          var content = document.getElementById(tab.getAttribute("tabItem"));
+          content.classList.remove("hidden");
+
+          // Reset all tabs to inactive state
+          document.querySelectorAll("[tabItem]").forEach((tab) => {
+            tab.classList.remove("border-blue-600", "text-blue-600");
+            tab.classList.add("border-transparent");
+          });
+
+          // Set the clicked tab to active state
+          tab.classList.remove("border-transparent");
+          tab.classList.add("border-blue-600", "text-blue-600");
+        });
+      });
+    </script>
+  </body>
+</html>

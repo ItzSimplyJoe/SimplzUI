@@ -1,2 +1,67 @@
-<div class="">
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Default Accordion</title>
+</head>
+<body>
+    <div class="flex flex-col justify-start bg-grey-200 items-center gap-6 p-6 border border-grey-700" accordion-item>
+        <div class="flex justify-between items-center gap-8 w-full">
+            <h3 class="text-black font-semibold text-2xl">
+                Accordion Item 1
+            </h3>
+            <span class="text-black font-semibold text-3xl" accordion-switch>
+                +
+            </span>
+        </div>
+        <div class="hidden bg-grey-200 w-full justify-start items-center" accordion-content>
+            <p>
+                Accordion Content 1.
+            </p>
+        </div>
+    </div>
+    <div class="flex flex-col justify-start bg-grey-200 items-center gap-6 p-6 border border-grey-700" accordion-item>
+        <div class="flex justify-between items-center gap-8 w-full">
+            <h3 class="text-black font-semibold text-2xl">
+                Accordion Item 2
+            </h3>
+            <span class="text-black font-semibold text-3xl" accordion-switch>
+                +
+            </span>
+        </div>
+        <div class="hidden bg-grey-200 w-full justify-start items-center" accordion-content>
+            <p>
+                Accordion Content 2.
+            </p>
+        </div>
+    </div>
+    <div class="flex flex-col justify-start bg-grey-200 items-center gap-6 p-6 border border-grey-700" accordion-item>
+        <div class="flex justify-between items-center gap-8 w-full">
+            <h3 class="text-black font-semibold text-2xl">
+                Accordion Item 3
+            </h3>
+            <span class="text-black font-semibold text-3xl" accordion-switch>
+                +
+            </span>
+        </div>
+        <div class="hidden bg-grey-200 w-full justify-start items-center" accordion-content>
+            <p>
+                Accordion Content 3.
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+document.querySelectorAll('[accordion-item]').forEach(item => {
+    const switchElement = item.querySelector('[accordion-switch]');
+    const contentElement = item.querySelector('[accordion-content]');
+
+    switchElement.addEventListener('click', () => {
+        contentElement.classList.toggle('hidden');
+        switchElement.textContent = contentElement.classList.contains('hidden') ? '+' : '-';
+    });
+});
+</script>
+</html>

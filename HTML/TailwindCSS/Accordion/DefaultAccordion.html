@@ -1,67 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
-    <title>Default Accordion</title>
-</head>
-<body>
-    <div class="flex flex-col justify-start bg-grey-200 items-center gap-6 p-6 border border-grey-700" accordion-item>
-        <div class="flex justify-between items-center gap-8 w-full">
-            <h3 class="text-black font-semibold text-2xl">
-                Accordion Item 1
-            </h3>
-            <span class="text-black font-semibold text-3xl" accordion-switch>
-                +
-            </span>
-        </div>
-        <div class="hidden bg-grey-200 w-full justify-start items-center" accordion-content>
-            <p>
-                Accordion Content 1.
-            </p>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Light-themed Accordion</title>
+  </head>
+  <body>
+    <div
+      class="flex flex-col justify-start bg-white items-center gap-6 p-6 border border-gray-300 cursor-pointer shadow-md"
+      accordion-item
+    >
+      <div class="flex justify-between items-center gap-8 w-full">
+        <h3 class="text-gray-800 font-semibold text-2xl">Accordion Item 1</h3>
+        <svg
+          viewBox="0 0 24 24"
+          class="w-8 h-8 fill-gray-800 transform transition-transform duration-500"
+          xmlns="http://www.w3.org/2000/svg"
+          accordion-switch
+        >
+          <path
+            d="M12 8c-.265 0-.52.105-.707.293l-5 5a1 1 0 101.414 1.414L12 10.414l4.293 4.293a1 1 0 101.414-1.414l-5-5A1 1 0 0012 8z"
+          />
+        </svg>
+      </div>
+      <div
+        class="hidden bg-white w-full justify-start items-center pt-4"
+        accordion-content
+      >
+        <p class="text-gray-700">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit
+          amet urna feugiat, interdum enim a, convallis libero. Vivamus quis
+          risus lorem. Donec mattis enim interdum ipsum hendrerit, sit amet
+          tempus odio molestie. Proin vel lacus porta, fringilla metus id,
+          fermentum justo. Nulla non cursus mi. Donec lobortis aliquet viverra.
+          Morbi quis magna nec quam rutrum iaculis at nec sem. Suspendisse est
+          enim, ornare vitae purus et, consectetur volutpat lorem. Nulla
+          convallis libero vel purus euismod vulputate. Ut lobortis velit ante,
+          nec porttitor tortor egestas ut. Fusce vel massa a enim tempor
+          molestie a vitae lectus. Donec et nisi id urna malesuada rhoncus.
+        </p>
+      </div>
     </div>
-    <div class="flex flex-col justify-start bg-grey-200 items-center gap-6 p-6 border border-grey-700" accordion-item>
-        <div class="flex justify-between items-center gap-8 w-full">
-            <h3 class="text-black font-semibold text-2xl">
-                Accordion Item 2
-            </h3>
-            <span class="text-black font-semibold text-3xl" accordion-switch>
-                +
-            </span>
-        </div>
-        <div class="hidden bg-grey-200 w-full justify-start items-center" accordion-content>
-            <p>
-                Accordion Content 2.
-            </p>
-        </div>
+    <div
+      class="flex flex-col justify-start bg-white items-center gap-6 p-6 border border-gray-300 cursor-pointer shadow-md"
+      accordion-item
+    >
+      <div class="flex justify-between items-center gap-8 w-full">
+        <h3 class="text-gray-800 font-semibold text-2xl">Accordion Item 2</h3>
+        <svg
+          viewBox="0 0 24 24"
+          class="w-8 h-8 fill-gray-800 transform transition-transform duration-500"
+          xmlns="http://www.w3.org/2000/svg"
+          accordion-switch
+        >
+          <path
+            d="M12 8c-.265 0-.52.105-.707.293l-5 5a1 1 0 101.414 1.414L12 10.414l4.293 4.293a1 1 0 101.414-1.414l-5-5A1 1 0 0012 8z"
+          />
+        </svg>
+      </div>
+      <div
+        class="hidden bg-white w-full justify-start items-center pt-4"
+        accordion-content
+      >
+        <p class="text-gray-700">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit
+          amet urna feugiat, interdum enim a, convallis libero. Vivamus quis
+          risus lorem. Donec mattis enim interdum ipsum hendrerit, sit amet
+          tempus odio molestie. Proin vel lacus porta, fringilla metus id,
+          fermentum justo. Nulla non cursus mi. Donec lobortis aliquet viverra.
+          Morbi quis magna nec quam rutrum iaculis at nec sem. Suspendisse est
+          enim, ornare vitae purus et, consectetur volutpat lorem. Nulla
+          convallis libero vel purus euismod vulputate. Ut lobortis velit ante,
+          nec porttitor tortor egestas ut. Fusce vel massa a enim tempor
+          molestie a vitae lectus. Donec et nisi id urna malesuada rhoncus.
+        </p>
+      </div>
     </div>
-    <div class="flex flex-col justify-start bg-grey-200 items-center gap-6 p-6 border border-grey-700" accordion-item>
-        <div class="flex justify-between items-center gap-8 w-full">
-            <h3 class="text-black font-semibold text-2xl">
-                Accordion Item 3
-            </h3>
-            <span class="text-black font-semibold text-3xl" accordion-switch>
-                +
-            </span>
-        </div>
-        <div class="hidden bg-grey-200 w-full justify-start items-center" accordion-content>
-            <p>
-                Accordion Content 3.
-            </p>
-        </div>
+    <div
+      class="flex flex-col justify-start bg-white items-center gap-6 p-6 border border-gray-300 cursor-pointer shadow-md"
+      accordion-item
+    >
+      <div class="flex justify-between items-center gap-8 w-full">
+        <h3 class="text-gray-800 font-semibold text-2xl">Accordion Item 3</h3>
+        <svg
+          viewBox="0 0 24 24"
+          class="w-8 h-8 fill-gray-800 transform transition-transform duration-500"
+          xmlns="http://www.w3.org/2000/svg"
+          accordion-switch
+        >
+          <path
+            d="M12 8c-.265 0-.52.105-.707.293l-5 5a1 1 0 101.414 1.414L12 10.414l4.293 4.293a1 1 0 101.414-1.414l-5-5A1 1 0 0012 8z"
+          />
+        </svg>
+      </div>
+      <div
+        class="hidden bg-white w-full justify-start items-center pt-4"
+        accordion-content
+      >
+        <p class="text-gray-700">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit
+          amet urna feugiat, interdum enim a, convallis libero. Vivamus quis
+          risus lorem. Donec mattis enim interdum ipsum hendrerit, sit amet
+          tempus odio molestie. Proin vel lacus porta, fringilla metus id,
+          fermentum justo. Nulla non cursus mi. Donec lobortis aliquet viverra.
+          Morbi quis magna nec quam rutrum iaculis at nec sem. Suspendisse est
+          enim, ornare vitae purus et, consectetur volutpat lorem. Nulla
+          convallis libero vel purus euismod vulputate. Ut lobortis velit ante,
+          nec porttitor tortor egestas ut. Fusce vel massa a enim tempor
+          molestie a vitae lectus. Donec et nisi id urna malesuada rhoncus.
+        </p>
+      </div>
     </div>
-</body>
-<script>
-document.querySelectorAll('[accordion-item]').forEach(item => {
-    const switchElement = item.querySelector('[accordion-switch]');
-    const contentElement = item.querySelector('[accordion-content]');
+  </body>
+  <script>
+    document.querySelectorAll("[accordion-item]").forEach((item) => {
+      const switchElement = item.querySelector("[accordion-switch]");
+      const contentElement = item.querySelector("[accordion-content]");
 
-    switchElement.addEventListener('click', () => {
-        contentElement.classList.toggle('hidden');
-        switchElement.textContent = contentElement.classList.contains('hidden') ? '+' : '-';
+      item.addEventListener("click", () => {
+        contentElement.classList.toggle("hidden");
+        switchElement.classList.toggle("rotate-180");
+      });
     });
-});
-</script>
+  </script>
 </html>

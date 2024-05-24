@@ -7,11 +7,22 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <title>Dark Theme Accordion</title>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.14.0/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js"
+    ></script>
+
+    <title>Light-themed Accordion With Animation Using AlpineJS</title>
   </head>
   <body>
     <div
-      class="flex flex-col justify-start bg-gray-800 items-center gap-6 p-6 border border-gray-600 cursor-pointer"
+      class="flex flex-col justify-start bg-gray-800 items-center gap-6 p-6 border border-gray-600 cursor-pointer shadow-md"
+      x-data="{ expanded: false }"
+      @click="expanded = ! expanded"
       accordion-item
     >
       <div class="flex justify-between items-center gap-8 w-full">
@@ -19,6 +30,7 @@
         <svg
           viewBox="0 0 24 24"
           class="w-8 h-8 transform transition-transform duration-500"
+          :class="{ 'rotate-180': expanded }"
           xmlns="http://www.w3.org/2000/svg"
           accordion-switch
           fill="white"
@@ -29,8 +41,9 @@
         </svg>
       </div>
       <div
-        class="hidden bg-gray-800 w-full justify-start items-center"
-        accordion-content
+        class="bg-gray-800 w-full justify-start items-center pt-4"
+        x-show="expanded"
+        x-collapse
       >
         <p class="text-gray-300">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit
@@ -47,7 +60,9 @@
       </div>
     </div>
     <div
-      class="flex flex-col justify-start bg-gray-800 items-center gap-6 p-6 border border-gray-600 cursor-pointer"
+      class="flex flex-col justify-start bg-gray-800 items-center gap-6 p-6 border border-gray-600 cursor-pointer shadow-md"
+      x-data="{ expanded: false }"
+      @click="expanded = ! expanded"
       accordion-item
     >
       <div class="flex justify-between items-center gap-8 w-full">
@@ -55,6 +70,7 @@
         <svg
           viewBox="0 0 24 24"
           class="w-8 h-8 transform transition-transform duration-500"
+          :class="{ 'rotate-180': expanded }"
           xmlns="http://www.w3.org/2000/svg"
           accordion-switch
           fill="white"
@@ -65,8 +81,9 @@
         </svg>
       </div>
       <div
-        class="hidden bg-gray-800 w-full justify-start items-center"
-        accordion-content
+        class="bg-gray-800 w-full justify-start items-center pt-4"
+        x-show="expanded"
+        x-collapse
       >
         <p class="text-gray-300">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit
@@ -83,7 +100,9 @@
       </div>
     </div>
     <div
-      class="flex flex-col justify-start bg-gray-800 items-center gap-6 p-6 border border-gray-600 cursor-pointer"
+      class="flex flex-col justify-start bg-gray-800 items-center gap-6 p-6 border border-gray-600 cursor-pointer shadow-md"
+      x-data="{ expanded: false }"
+      @click="expanded = ! expanded"
       accordion-item
     >
       <div class="flex justify-between items-center gap-8 w-full">
@@ -91,6 +110,7 @@
         <svg
           viewBox="0 0 24 24"
           class="w-8 h-8 transform transition-transform duration-500"
+          :class="{ 'rotate-180': expanded }"
           xmlns="http://www.w3.org/2000/svg"
           accordion-switch
           fill="white"
@@ -101,8 +121,9 @@
         </svg>
       </div>
       <div
-        class="hidden bg-gray-800 w-full justify-start items-center"
-        accordion-content
+        class="bg-gray-800 w-full justify-start items-center pt-4"
+        x-show="expanded"
+        x-collapse
       >
         <p class="text-gray-300">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit
@@ -119,15 +140,4 @@
       </div>
     </div>
   </body>
-  <script>
-    document.querySelectorAll("[accordion-item]").forEach((item) => {
-      const switchElement = item.querySelector("[accordion-switch]");
-      const contentElement = item.querySelector("[accordion-content]");
-
-      item.addEventListener("click", () => {
-        contentElement.classList.toggle("hidden");
-        switchElement.classList.toggle("rotate-180");
-      });
-    });
-  </script>
 </html>

@@ -1,59 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tab Interface</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="flex flex-col gap-6 p-6">
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="flex flex-col gap-6 p-6">
     <div class="w-full bg-white shadow-lg rounded-lg">
-        <div class="flex w-full justify-start gap-2">
-            <div class="flex bg-blue-600 text-white justify-center items-center px-12 py-3 rounded-t-lg bg-gray-100 text-black hover:text-white cursor-pointer hover:bg-blue-600 transition-all duration-300" tabItem="tab1">Tab 1</div>
-            <div class="flex justify-center items-center px-12 py-3 rounded-t-lg bg-gray-100 text-black hover:text-white cursor-pointer hover:bg-blue-600 transition-all duration-300" tabItem="tab2">Tab 2</div>
-            <div class="flex justify-center items-center px-12 py-3 rounded-t-lg bg-gray-100 text-black hover:text-white cursor-pointer hover:bg-blue-600 transition-all duration-300" tabItem="tab3">Tab 3</div>
-            <div class="flex justify-center items-center px-12 py-3 rounded-t-lg bg-gray-100 text-black hover:text-white cursor-pointer hover:bg-blue-600 transition-all duration-300" tabItem="tab4">Tab 4</div>
-            <div class="flex justify-center items-center px-12 py-3 rounded-t-lg bg-gray-100 text-black hover:text-white cursor-pointer hover:bg-blue-600 transition-all duration-300" tabItem="tab5">Tab 5</div>
+      <div class="flex w-full justify-start gap-2">
+        <div
+          class="flex bg-blue-600 text-white justify-center items-center px-12 py-3 rounded-t-lg bg-gray-100 text-black hover:text-white cursor-pointer hover:bg-blue-600 transition-all duration-300"
+          tabItem="tab1"
+        >
+          Tab 1
         </div>
-        <div class="p-4 border-t border-gray-200 w-full">
-            <div id="tab1">
-                Content for Tab 1
-            </div>
-            <div id="tab2" class="hidden">
-                Content for Tab 2
-            </div>
-            <div id="tab3" class="hidden">
-                Content for Tab 3
-            </div>
-            <div id="tab4" class="hidden">
-                Content for Tab 4
-            </div>
-            <div id="tab5" class="hidden">
-                Content for Tab 5
-            </div>
+        <div
+          class="flex justify-center items-center px-12 py-3 rounded-t-lg bg-gray-100 text-black hover:text-white cursor-pointer hover:bg-blue-600 transition-all duration-300"
+          tabItem="tab2"
+        >
+          Tab 2
         </div>
+        <div
+          class="flex justify-center items-center px-12 py-3 rounded-t-lg bg-gray-100 text-black hover:text-white cursor-pointer hover:bg-blue-600 transition-all duration-300"
+          tabItem="tab3"
+        >
+          Tab 3
+        </div>
+        <div
+          class="flex justify-center items-center px-12 py-3 rounded-t-lg bg-gray-100 text-black hover:text-white cursor-pointer hover:bg-blue-600 transition-all duration-300"
+          tabItem="tab4"
+        >
+          Tab 4
+        </div>
+        <div
+          class="flex justify-center items-center px-12 py-3 rounded-t-lg bg-gray-100 text-black hover:text-white cursor-pointer hover:bg-blue-600 transition-all duration-300"
+          tabItem="tab5"
+        >
+          Tab 5
+        </div>
+      </div>
+      <div class="p-4 border-t border-gray-200 w-full">
+        <div id="tab1">Content for Tab 1</div>
+        <div id="tab2" class="hidden">Content for Tab 2</div>
+        <div id="tab3" class="hidden">Content for Tab 3</div>
+        <div id="tab4" class="hidden">Content for Tab 4</div>
+        <div id="tab5" class="hidden">Content for Tab 5</div>
+      </div>
     </div>
-    
+
     <script>
-        document.querySelectorAll("[tabItem]").forEach((tab) => {
-            tab.addEventListener("click", () => {
-                document.querySelectorAll("[id^='tab']").forEach((tabContent) => {
-                    tabContent.classList.add("hidden");
-                });
-    
-                var content = document.getElementById(tab.getAttribute("tabItem"));
-                content.classList.remove("hidden");
-    
-                document.querySelectorAll("[tabItem]").forEach((tab) => {
-                    tab.classList.remove("bg-blue-600", "text-white");
-                    tab.classList.add("bg-gray-100", "text-black");
-                });
-    
-                tab.classList.remove("bg-gray-100", "text-black");
-                tab.classList.add("bg-blue-600", "text-white");
-            });
+      document.querySelectorAll("[tabItem]").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document.querySelectorAll("[id^='tab']").forEach((tabContent) => {
+            tabContent.classList.add("hidden");
+          });
+
+          var content = document.getElementById(tab.getAttribute("tabItem"));
+          content.classList.remove("hidden");
+
+          document.querySelectorAll("[tabItem]").forEach((tab) => {
+            tab.classList.remove("bg-blue-600", "text-white");
+            tab.classList.add("bg-gray-100", "text-black");
+          });
+
+          tab.classList.remove("bg-gray-100", "text-black");
+          tab.classList.add("bg-blue-600", "text-white");
         });
+      });
     </script>
-    
-</body>
+  </body>
 </html>

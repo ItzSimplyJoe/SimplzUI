@@ -13,7 +13,7 @@
     <div class="w-full bg-white shadow-lg rounded-lg flex gap-4">
       <div class="flex flex-col w-1/6 border-r border-gray-200 gap-4 p-4">
         <div
-          class="flex gap-2 justify-center items-center px-4 py-3 bg-blue-600 text-white hover:bg-blue-700 shadow-md cursor-pointer transition-all duration-300 rounded-lg"
+          class="flex gap-2 justify-center items-center px-4 py-3 bg-blue-600 bg-gray-800 text-white hover:bg-blue-700 shadow-md cursor-pointer transition-all duration-300 rounded-lg"
           tabItem="tab1"
         >
           <svg
@@ -30,7 +30,7 @@
           Tab 1
         </div>
         <div
-          class="flex gap-2 justify-center items-center px-4 py-3 bg-gray-100 text-black hover:bg-blue-600 hover:text-white shadow-md cursor-pointer transition-all duration-300 rounded-lg"
+          class="flex gap-2 justify-center items-center px-4 py-3 bg-gray-100 bg-gray-800 hover:bg-blue-600 text-white shadow-md cursor-pointer transition-all duration-300 rounded-lg"
           tabItem="tab2"
         >
           <svg
@@ -47,7 +47,7 @@
           Tab 2
         </div>
         <div
-          class="flex gap-2 justify-center items-center px-4 py-3 bg-gray-100 text-black hover:bg-blue-600 hover:text-white shadow-md cursor-pointer transition-all duration-300 rounded-lg"
+          class="flex gap-2 justify-center items-center px-4 py-3 bg-gray-100 bg-gray-800 hover:bg-blue-600 text-white shadow-md cursor-pointer transition-all duration-300 rounded-lg"
           tabItem="tab3"
         >
           <svg
@@ -64,7 +64,7 @@
           Tab 3
         </div>
         <div
-          class="flex gap-2 justify-center items-center px-4 py-3 bg-gray-100 text-black hover:bg-blue-600 hover:text-white shadow-md cursor-pointer transition-all duration-300 rounded-lg"
+          class="flex gap-2 justify-center items-center px-4 py-3 bg-gray-100 bg-gray-800 hover:bg-blue-600 text-white shadow-md cursor-pointer transition-all duration-300 rounded-lg"
           tabItem="tab4"
         >
           <svg
@@ -81,7 +81,7 @@
           Tab 4
         </div>
         <div
-          class="flex gap-2 justify-center items-center px-4 py-3 bg-gray-100 text-black hover:bg-blue-600 hover:text-white shadow-md cursor-pointer transition-all duration-300 rounded-lg"
+          class="flex gap-2 justify-center items-center px-4 py-3 bg-gray-100 bg-gray-800 hover:bg-blue-600 text-white shadow-md cursor-pointer transition-all duration-300 rounded-lg"
           tabItem="tab5"
         >
           <svg
@@ -118,12 +118,12 @@
           content.classList.remove("hidden");
 
           document.querySelectorAll("[tabItem]").forEach((tab) => {
-            tab.classList.remove("bg-blue-600", "text-white");
-            tab.classList.add("bg-gray-100", "text-black");
+            tab.classList.remove("bg-blue-600");
+            tab.classList.add("bg-gray-100");
           });
 
-          tab.classList.remove("bg-gray-100", "text-black");
-          tab.classList.add("bg-blue-600", "text-white");
+          tab.classList.remove("bg-gray-100");
+          tab.classList.add("bg-blue-600");
         });
       });
     </script>

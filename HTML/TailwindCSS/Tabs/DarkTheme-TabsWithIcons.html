@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vertical Tab Interface with Icons</title>
+    <title>Tab With Icons</title>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
   </head>
   <body class="flex flex-col gap-6 p-6">
-    <div class="w-full bg-white shadow-lg rounded-lg flex gap-4">
-      <div class="flex flex-col w-1/6 border-r border-gray-200 gap-4 p-4">
+    <div class="w-full bg-white shadow-lg rounded-lg">
+      <div class="flex w-full justify-start gap-2">
         <div
-          class="flex gap-2 justify-center items-center px-4 py-3 bg-blue-600 text-white hover:bg-blue-700 shadow-md cursor-pointer transition-all duration-300 rounded-lg"
+          class="flex gap-2 justify-center text-white bg-gray-800 items-center px-12 py-3 cursor-pointer transition-all duration-300 border-b-4 border-transparent border-blue-600 text-blue-600 hover:border-blue-600 hover:text-blue-600"
           tabItem="tab1"
         >
           <svg
@@ -30,7 +30,7 @@
           Tab 1
         </div>
         <div
-          class="flex gap-2 justify-center items-center px-4 py-3 bg-gray-100 text-black hover:bg-blue-600 hover:text-white shadow-md cursor-pointer transition-all duration-300 rounded-lg"
+          class="flex gap-2 justify-center text-white bg-gray-800 items-center px-12 py-3 cursor-pointer transition-all duration-300 border-b-4 border-transparent hover:border-blue-600 hover:text-blue-600"
           tabItem="tab2"
         >
           <svg
@@ -47,7 +47,7 @@
           Tab 2
         </div>
         <div
-          class="flex gap-2 justify-center items-center px-4 py-3 bg-gray-100 text-black hover:bg-blue-600 hover:text-white shadow-md cursor-pointer transition-all duration-300 rounded-lg"
+          class="flex gap-2 justify-center text-white bg-gray-800 items-center px-12 py-3 cursor-pointer transition-all duration-300 border-b-4 border-transparent hover:border-blue-600 hover:text-blue-600"
           tabItem="tab3"
         >
           <svg
@@ -64,7 +64,7 @@
           Tab 3
         </div>
         <div
-          class="flex gap-2 justify-center items-center px-4 py-3 bg-gray-100 text-black hover:bg-blue-600 hover:text-white shadow-md cursor-pointer transition-all duration-300 rounded-lg"
+          class="flex gap-2 justify-center text-white bg-gray-800 items-center px-12 py-3 cursor-pointer transition-all duration-300 border-b-4 border-transparent hover:border-blue-600 hover:text-blue-600"
           tabItem="tab4"
         >
           <svg
@@ -81,7 +81,7 @@
           Tab 4
         </div>
         <div
-          class="flex gap-2 justify-center items-center px-4 py-3 bg-gray-100 text-black hover:bg-blue-600 hover:text-white shadow-md cursor-pointer transition-all duration-300 rounded-lg"
+          class="flex gap-2 justify-center text-white bg-gray-800 items-center px-12 py-3 cursor-pointer transition-all duration-300 border-b-4 border-transparent hover:border-blue-600 hover:text-blue-600"
           tabItem="tab5"
         >
           <svg
@@ -98,7 +98,7 @@
           Tab 5
         </div>
       </div>
-      <div class="p-4 w-3/4">
+      <div class="p-4 border-t border-gray-200 w-full">
         <div id="tab1">Content for Tab 1</div>
         <div id="tab2" class="hidden">Content for Tab 2</div>
         <div id="tab3" class="hidden">Content for Tab 3</div>
@@ -110,20 +110,24 @@
     <script>
       document.querySelectorAll("[tabItem]").forEach((tab) => {
         tab.addEventListener("click", () => {
+          // Hide all tab contents
           document.querySelectorAll("[id^='tab']").forEach((tabContent) => {
             tabContent.classList.add("hidden");
           });
 
+          // Show the selected tab content
           var content = document.getElementById(tab.getAttribute("tabItem"));
           content.classList.remove("hidden");
 
+          // Reset all tabs to inactive state
           document.querySelectorAll("[tabItem]").forEach((tab) => {
-            tab.classList.remove("bg-blue-600", "text-white");
-            tab.classList.add("bg-gray-100", "text-black");
+            tab.classList.remove("border-blue-600", "text-blue-600");
+            tab.classList.add("border-transparent");
           });
 
-          tab.classList.remove("bg-gray-100", "text-black");
-          tab.classList.add("bg-blue-600", "text-white");
+          // Set the clicked tab to active state
+          tab.classList.remove("border-transparent");
+          tab.classList.add("border-blue-600", "text-blue-600");
         });
       });
     </script>
